@@ -1,0 +1,30 @@
+version: '3.3'
+
+networks:
+  traefik_bridge:
+    external: true
+  mariadb_bridge:
+    external: true
+  mailhog_bridge:
+    external: true
+
+services:
+  app:
+    image: registry.affineurs.pro/affineurs/php:8.1-apache-dev
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - './src/:/srv/app'
+      - '${HOME}/.cache/composer/:/home/symfony/.composer/cache'
+      - '${HOME}/.cache/yarn/:/home/symfony/.cache/yarn'
+    networks:
+      traefik_bridge:
+      mariadb_bridge:
+      mailhog_bridge:
+        aliases:
+          - 'mailhog.localhost.pro'
+    labels:
+      traefik.enable: 'true'
+      traefik.docker.network: traefik_bridge
+      traefik.http.routers.tutosymfo.entrypoints: web
+      traefik.http.routers.tutosymfo.rule: Host(`${DOMAIN}`)
