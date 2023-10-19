@@ -13,7 +13,7 @@
 {% include 'components/header.twig' %}
 
 <section class="location">
-    <img class="location__icon" src="{{ asset('location-logo.svg') }}" alt="logo de localisation">
+    <img class="location__icon" src="{{ asset('locationLogo.svg') }}" alt="logo de localisation">
     <p class="location__title">Paris, Belleville</p>
 </section>
 
@@ -53,8 +53,8 @@
     <p class="footer__title">ohmyfood</p>
 
     <ul class="footer-list">
-        <li class="footer-item"><img class="footer-item__icon" src="img/eat-svg.svg" width="18px" alt="">Proposer un restaurant</li>
-        <li class="footer-item"><img class="footer-item__icon" src="img/handshake-logo.svg" width="18px" alt="">Devenir partenaire</li>
+        <li class="footer-item"><img class="footer-item__icon" src="{{ asset('eatLogo.svg') }}" width="18px" alt="">Proposer un restaurant</li>
+        <li class="footer-item"><img class="footer-item__icon" src="{{ asset('handshakeLogo.svg') }}" width="18px" alt="">Devenir partenaire</li>
         <li class="footer-item">Mentions légales</li>
         <li class="footer-item"><a href="{#{{ path('contact') }}#}">Contact</a></li>
     </ul>
