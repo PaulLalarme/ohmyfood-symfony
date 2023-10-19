@@ -46,6 +46,6 @@ class RestaurantController extends AbstractController
     {
         $title = u(str_replace('-', '', $slug))->title(true);
 
-        return new Response('Intitulé de plats : ' . $title);
+        return $this->render('')
     }
 }
