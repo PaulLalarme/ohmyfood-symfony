@@ -1,0 +1,47 @@
+.liked {
+    
+    transition: fill 2s ease;
+
+    .check-input {
+        display: none;
+        
+        &:checked + .checkbox{
+            
+            svg path{
+                fill: $bg-svg-liked;
+                
+            }
+        }
+        &:hover + .checkbox {
+            svg path{
+                fill: $bg-svg-liked;
+                transition: fill 0.8s ease;
+            }
+        }
+    }
+
+    .checkbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        cursor: pointer;
+        // background-color: lightcoral;
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+        .svg-large {
+            width: clamp(2.667rem, 2.044rem + 2.492vw, 5.333rem);
+            height: clamp(2.667rem, 2.044rem + 2.492vw, 5.333rem);
+        }
+    }
+
+    
+}
+.liked-absolute {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+

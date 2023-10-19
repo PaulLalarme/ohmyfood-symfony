@@ -1,0 +1,105 @@
+.restaurant {
+
+    @include flexbox(column,nowrap,center,center);
+    background: linear-gradient(180deg, #F7F7F7 0%, #F7F7F7 100%);
+    padding-block: 3rem 2rem;
+    &__label {
+
+        width: 70%;
+        @include flexbox(row,nowrap,left,center);
+
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: black;
+        
+        @media (min-width:500px) {
+            justify-content: center;
+        }
+    }
+    
+    .restaurants-list {
+        min-height: 350px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-block: 1rem;
+
+        .restaurant-item {
+
+            position: relative;
+            width: 335px;
+            height: 270px;
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+            margin-block: 1rem;
+            img { // bg image
+                position: absolute;
+                top: -80px;
+                width: 100%;
+                height: 100%;
+            }
+            .custom2{ // bg image rotated
+                left: -85px;
+                top: -120px;
+                width: 155%;
+                height: 135%;
+                rotate: -90deg;
+            }
+
+            transition: box-shadow 0.5s ease-in-out;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0.30px 4px 20px 0px rgba(0, 0, 0, 0.25);
+            
+            .restaurant-info {
+
+                width: 100%;
+                position: absolute;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                bottom: 0;
+                height: 35%;
+                padding-left: 1.5rem;
+                background-color: white;
+
+                .restaurant-title {
+                    color: #000;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+
+                .restaurant-adress {
+                    color: #1d1d1d;
+                    font-family: $roboto;
+                    font-size: 1rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            &:hover{
+                box-shadow: 0.30px 4px 20px 0px #A35CDC;    
+            }
+        }
+        .restaurant-selected {
+            box-shadow: 0.30px 4px 20px 0px #A35CDC;
+        }
+
+        @media (max-width:1500px) {
+            flex-direction: column;
+        }
+    }
+    
+}

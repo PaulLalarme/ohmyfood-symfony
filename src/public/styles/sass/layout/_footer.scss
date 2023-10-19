@@ -1,0 +1,46 @@
+.footer {
+    
+    width: 100%;
+    @include flexbox(column,nowrap,center,center);
+    
+    padding-block: 0.5rem 2.5rem;
+
+    color: $font-color-footer;
+    background-color: $bg-color-footer;
+    &__title {
+        padding-top: 1rem;
+        padding-bottom: clamp(1rem, 0.611rem + 1.558vw, 2.667rem);
+
+        color: $font-color-white;
+        font-family: $font-family-logo-footer;
+        font-size: 18px;
+        
+        @media (max-width:1000px) {
+            width: 90%;
+            justify-content: center;
+        }
+    }
+    
+    .footer-list {
+
+        width: 60%;
+        @include flexbox(row,nowrap,space-evenly,center);
+
+        .footer-item {
+
+            @include flexbox(row,wrap,center,center);
+            cursor: pointer;
+            color: white;
+            padding-block: 0.25rem;
+            &__icon {
+                margin-right: 1rem;
+            }
+        }
+
+        @media (max-width:1000px) {
+            width: 90%;
+            @include flexbox(column,nowrap,center,start);
+        }
+    }     
+}
+

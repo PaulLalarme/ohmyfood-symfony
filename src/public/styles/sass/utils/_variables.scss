@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+
+/*POLICES*/
+$roboto:Roboto,sans-serif;
+$shrikhand: 'Shrikhand', cursive;
+/*POLICES*/
+
+/*ROOT COLOR*/
+$colour-primary: #15DEA5;
+$colour-secondary: #001534;
+$colour-accent: #D6FFF5;
+$colour-white: #fff;
+$colour-invalid: #DB464B;
+$font-color-black: black;
+$font-color-white: white;
+$font-color-green: #99E2D0;
+$color-grey:#7C7C7C;
+// Colors
+$blackCustom: #040707;
+$whiteCustom: #FFFFFF;
+$greyCustom: #F4F4F4;
+$darkGreyCustom: #CCCCCC;
+$darkerGreyCustom: #BBBBBB;
+$darkestGreyCustom: #999999;
+$lightBrownCustom: #C8954F;
+$brownCustom: #BD842E;
+$orangeCustom: #B84221;
+$darkOrangeCustom: #A0260A;
+$tealCustom: #1CA7A9;
+$darkTealCustom: #048689;
+$beigeCustom: #ECDAC2;
+$darkBeigeCustom: #D8B583;
+
+// Page width
+$min-width: 375px;
+$max-width: 1920px;
+
+/*HEADER*/
+$heading-shadow-size: .55rem;
+$font-size-header:clamp(2rem, 1.766rem + 0.935vw, 3rem);
+$padding-top-header:1rem;
+$padding-bottom-header:0.3rem;
+$bg-color-header:#fff;
+$color-logo-header: $font-color-black;
+$font-family-logo-header: $shrikhand;
+/*HEADER*/
+
+/*LOCATION*/
+$font-size-location:clamp(1rem, 0.922rem + 0.312vw, 1.333rem);
+$bg-color-location:#EAEAEA;
+$padding-block-location:clamp(0.5rem, 2vw,1.5rem);
+$font-color-location:black;
+$img-width-location:1.25rem;
+/*LOCATION*/
+
+/*HEADER*/
+$bg-color-footer:#353535;
+$color-logo-footer: $font-color-white;
+$font-family-logo-footer: $shrikhand;
+$font-color-footer:white;
+/*HEADER*/
+
+/*DETAILS FORM*/
+$border-radius-details-form: 1rem;
+$width-add-item-open:55px;
+$width-add-item-close:0px;
+/*DETAILS FORM*/
+
+/*INTRO*/
+$font-size-intro:clamp(1.2rem, 1.091rem + 0.436vw, 1.667rem);
+$font-size-intro-title:clamp(1rem, 0.688rem + 1.246vw, 2.333rem);
+
+/*INTRO*/
+
+/*RULES*/
+$font-size-intro-title:2rem;
+$padding-inline-container-card:2rem;
+$padding-block-container-card:1rem;
+$padding-inline-rules-title:2rem;
+$padding-block-rules-title:0.5rem;
+$bg-color-numeration:#A35CDC;
+$bg-light-color-numeration:#a75ee2a1;
+$width-numeration:25px;
+$bg-rules:white;
+/*RULES*/
+
+/*FOOTER*/
+$font-size-footer:15px;
+/*FOOTER*/
+
+/*LIKED*/
+$bg-svg-liked: #A15CDC;
+
+// Fonts
+$light: ('WorkSans-Light', 'arial', 'sans-serif');
+$regular: ('WorkSans-Regular', 'arial', 'sans-serif');
+$medium: ('WorkSans-Medium', 'arial', 'sans-serif');
+$semibold: ('WorkSans-Semibold', 'arial', 'sans-serif');
+$bold: ('WorkSans-Bold', 'arial', 'sans-serif');
+
+// Breakpoints
+$breakpoints:(
+    small: 576px,
+    medium: 768px,
+    large: 992px,
+    xlarge: 1280px,
+    xxlarge: 1400px,
+    max: 1920px
+);

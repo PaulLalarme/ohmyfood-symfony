@@ -1,0 +1,21 @@
+.location {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-location;
+    background-color:$bg-color-location;
+    padding-block: $padding-block-location;
+    cursor: pointer;
+    &__title {
+        
+        text-decoration: none;
+        color: $font-color-location;    
+    }
+    &__icon { 
+        
+        width: $img-width-location;
+        padding-inline: 0.25rem;
+        
+    }
+}

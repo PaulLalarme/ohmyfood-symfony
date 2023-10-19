@@ -1,0 +1,27 @@
+
+.maps-google {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #map {
+
+        height: 250px;
+        width: 100%;
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+    }
+    #route-details {
+        width: 100%;
+        padding-block: 2rem 1rem;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+.bg-dot{
+    .dot {
+        
+    }
+}

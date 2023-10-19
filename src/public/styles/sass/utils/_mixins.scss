@@ -1,0 +1,132 @@
+// breakpoints
+@mixin small{
+    @media all and (min-width: map-get($map: $breakpoints, $key: small)) {
+        @content;
+    }
+}
+
+@mixin medium{
+    @media all and (min-width: map-get($map: $breakpoints, $key: medium)) {
+        @content;
+    }
+}
+
+@mixin large{
+    @media all and (min-width: map-get($map: $breakpoints, $key: large)) {
+        @content;
+    }
+}
+
+@mixin xlarge{
+    @media all and (min-width: map-get($map: $breakpoints, $key: xlarge)) {
+        @content;
+    }
+}
+
+@mixin xxlarge{
+    @media all and (min-width: map-get($map: $breakpoints, $key: xxlarge)) {
+        @content;
+    }
+}
+
+
+// Containers
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin circle($width) {
+    width: $width;
+    height: $width;
+    border-radius: 50%;
+}
+
+
+// Layout
+@mixin flexbox($direction, $wrap, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $direction; /* default is 'row' */
+    flex-wrap: $wrap; /* default is 'nowrap' */
+    justify-content: $justify-content; /* default is 'flex-start' */
+    align-items:$align-items;
+}
+
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top; /* default value is 'auto' */
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin filter($height) {
+    @include flexbox(column, nowrap, center, center);
+    @include position(relative, -30px, auto, auto, auto);
+    @include size(auto, $height);
+    max-width: 720px;
+    margin: auto;
+    margin-bottom: -30px;
+
+    @include medium {
+        @include flexbox(row, nowrap, space-between, center);
+        @include size(auto, 60px);
+    }
+
+    .select2-container--default {
+        @include size(340px !important, 60px !important);
+    }
+
+    .search {
+        @include flexbox(row, nowrap, center, center);
+        @include size(340px !important, 60px !important);
+        background-color: $blackCustom;
+
+        @include medium {
+            @include size(60px !important);
+        }
+
+        img {
+            @include size(auto, 100%);
+            object-fit: cover;
+            padding: 1.2rem;
+        }
+
+        &:hover {
+            background-color: $lightBrownCustom;
+            cursor: pointer;
+        }
+    }
+}
+
+@mixin filter-news-events() {
+    @include small {
+        @include flexbox(row, nowrap, center, center);
+        @include size(auto, 60px);
+    }
+
+    .select2-container--default {
+        .select2-selection--single {
+            @include small {
+                border-right: solid 1px $whiteCustom;
+                border-bottom: none;
+            }
+        }
+    }
+
+    .search {
+        @include small {
+            @include size(60px !important);
+        }
+    }
+}
+
+@mixin links($color: $orangeCustom, $hoverColor:$darkOrangeCustom) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: $color;
+
+    &:hover {
+        color: $hoverColor;
+    }
+}

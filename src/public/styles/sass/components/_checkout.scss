@@ -1,0 +1,117 @@
+.checkout-container {
+    
+    @include flexbox(column,nowrap,center,center);
+
+    .total-container {
+
+        @include size(100%,100%);
+        @include flexbox(column,nowrap,start,center);
+
+        h1 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            @include size(90%,50px);
+            @include flexbox(row,nowrap,left,center);
+        }
+
+        .splitLine {
+            @include size(100%,1px);
+            background-color: lightgray
+        }
+
+        .maps {
+            @include size(100%,300px);
+            background-color: lightblue;
+        }
+
+        &__label {
+
+            @include size(90%,60px);
+            @include flexbox(row,nowrap,space-between,end);
+            padding-bottom: 1rem;
+            p {
+                font-size: 0.8rem;
+                font-weight: 300; 
+            }
+            .title {
+                font-size: 1.5rem;
+                font-weight: 600; 
+            }            
+        }
+
+        .cube-loader {
+            @include flexbox(row,nowrap,space-between,center);
+            @include size(90%,3.5px);
+
+            &__element {
+
+                background-color: rgb(1, 180, 1);
+                @include size(18%,100%);
+                
+            }
+        }
+
+        &__list {
+            
+            @include flexbox(column,nowrap,center,center);
+            @include size(100%,125px);
+            list-style: none;
+            
+            &__item {
+
+                @include size(90%,25px);
+                @include flexbox(row,nowrap,center,center);
+                padding-block: 0.25rem;
+                span {
+
+                    width: 100%;
+                    @include flexbox(row,nowrap,space-between,center);
+                    p {                 
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        .items-select-list {
+            
+            @include flexbox(column,nowrap,center,center);
+            @include size(90%,90%);
+            padding-block: 2rem;
+
+            li {
+
+                list-style: none;
+                .item-select { // plats séléctionner
+
+                    @include size(325px,45px);
+                    @include flexbox(row,nowrap,space-between,center);
+                
+                    border: 1px dashed purple;
+
+                    margin: 0.5rem 0;
+                    padding: 0.5rem 1rem;
+
+                    
+
+                    &__text {
+
+                        &__title {
+
+                            font-size: 1.25rem;
+                            font-weight: 600;
+                        }
+                    }
+                    
+                    .price-item {
+
+                        @include size(40px,40px);
+                        @include flexbox(row,nowrap,center,center);
+                    }
+                }
+            }
+        }
+    }
+}

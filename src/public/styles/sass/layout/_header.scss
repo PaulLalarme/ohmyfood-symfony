@@ -1,0 +1,64 @@
+.custom-header {
+    @include flexbox(column,nowrap,center,center);
+    @include size(100%,80px);
+    background: $bg-color-header;
+    box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.25);
+    
+    
+    &__container {
+
+        @include flexbox(row,nowrap,space-between,center);
+        @include size(90%,100%);
+        padding-block: 1rem;
+        &__title {
+            font-size: $font-size-header;
+            color: $font-color-black;
+            font-family: $font-family-logo-header;
+            cursor: pointer;
+            border: 1px solid red;
+            @media (max-width:1200px) {
+                font-size: 2rem;
+            }
+        }
+        
+        &__backArrow { // go back icon
+            
+            display: block;
+            @include size(50px,50px);
+            rotate: 270deg;
+            border: 1px solid red;
+        }
+        &__userProfil {
+
+            @include flexbox(row,nowrap,end,center);
+            border: 1px dashed blue;
+            cursor:  pointer;
+            &__logoAccount {
+                
+                display: block;
+                @include size(50px,50px);
+                border: 1px dashed purple;
+            }
+            
+            &__text {
+
+                @include flexbox(column,nowrap,center,center);
+                
+                &__speudoAccount {
+                    display: none;
+                    font-weight: 600;
+                    @include size(100%,25px);
+                    text-align: end;
+                    border: 1px dashed red;
+                }
+                &__deconnectionAccount {
+                    display: none;
+                    font-weight: 600;
+                    @include size(100%,25px);
+                    text-align: end;
+                    border: 1px dashed red;
+                }
+            }
+        }
+    }
+}

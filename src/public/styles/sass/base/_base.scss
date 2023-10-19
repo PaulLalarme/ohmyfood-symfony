@@ -1,0 +1,41 @@
+// General display
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+};
+
+body {
+    min-width: $min-width;
+    max-width: $max-width;
+    margin: auto;
+    font-family: $medium;
+    font-size: 15px;
+    color: $blackCustom;
+    background-color: $whiteCustom;
+}
+
+a {
+    color: $blackCustom;
+    text-decoration: none;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
