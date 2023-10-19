@@ -1,0 +1,54 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <div class="checkoutForm">
+
+        {% if flash.success %}
+            <div class="flashMessage valid">
+                <div class="flashMessage__container">
+                    {{ flash.success }}
+                </div>
+            </div>
+        {% endif %}
+
+        {% if flash.error %}
+            <div class="flashMessage error">
+                <div class="flashMessage__container">
+                    {{ flash.error }}
+                </div>
+            </div>
+        {% endif %}
+
+        <form action="{{ path_for('contact') }}" method="post" class="checkoutForm__container">
+
+            {# {{ csrf | raw }} #}
+
+            <h1>Vos informations</h1>
+            
+            <div class="checkoutForm__container__field">
+                <input type="text" name="name" id="name" placeholder="Votre nom et prénom" value="{{ old.name }}" required>
+                {% if flash.contact.name %}
+                    <span class="wrong-span">{{ flash.contact.name }}</span>
+                {% endif %}
+            </div> 
+            
+            <div class="checkoutForm__container__field">
+                <input type="text" name="email" id="email" placeholder="Votre email" value="{{ old.email }}" required>
+                {% if flash.contact.email %}
+                    <span class="wrong-span">{{ flash.contact.email }}</span>
+                {% endif %}
+            </div> 
+
+            <div class="checkoutForm__container__field">
+                <textarea type="text" name="content" id="content" placeholder="Votre message" value="{{ old.content }}" required></textarea>
+                {% if flash.contact.content %}
+                    <span class="wrong-span">{{ flash.contact.content }}</span>
+                {% endif %}
+            </div> 
+
+            <div class="checkoutForm__container__field">
+                <input type="submit" value="Envoyer"></input>
+            </div>
+        </form>
+    </div>
+{% endblock %}
