@@ -1,0 +1,33 @@
+<div class="checkoutForm">
+
+    {% if flash.success %}
+        <div class="flashMessage valid">
+            <div class="flashMessage__container">
+                {{ flash.success }}
+            </div>
+        </div>
+    {% endif %}
+
+    {% if flash.error %}
+        <div class="flashMessage error">
+            <div class="flashMessage__container">
+                {{ flash.error }}
+            </div>
+        </div>
+    {% endif %}
+
+    <form class="checkoutForm__container" action="{{ path_for('login') }}" method="post" autocomplete="off">
+        
+        <h1>Connection</h1>
+
+        <div class="checkoutForm__container__field">
+            <input type="text" name="uid" placeholder="identifiants" autocomplete="false">
+        </div>
+        <div class="checkoutForm__container__field">
+            <input type="password" name="pwd" placeholder="mot de passe" autocomplete="false">
+        </div>
+        <div class="checkoutForm__container__field">
+            <button type="submit" name="submit" class="custom-btn">Me connecter</button>
+        </div>
+    </form>
+</div>

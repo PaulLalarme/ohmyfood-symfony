@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <h2>{{ adress }}</h2>
+
+    <div>
+        Introduction : {{ intro }}
+        Page du restaurant : {{ title  }}
+    </div>
+
+    <ul>
+        {% for dishe in dishes %}
+            <li>
+                <p> {{ dishe.title }} </p>
+                <p> {{ dishe.subtitle }} - {{ dishe.price }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

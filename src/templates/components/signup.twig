@@ -1,0 +1,37 @@
+<?php
+    include_once 'header.php';
+    include_once './helpers/session_helper.php';
+?>
+
+<div class="checkoutForm">
+
+    <?php flash('register') ?>
+
+    <form class="checkoutForm__container" action="./controllers/Users.php" method="post" autocomplete="off">
+        
+        <h1>Inscription</h1>
+
+        <div class="checkoutForm__container__field">
+            <input type="hidden" name="type" value="register" >
+        </div>
+        <div class="checkoutForm__container__field">
+            <input type="text" name="usersName" placeholder="Votre nom complet">
+        </div>
+        <div class="checkoutForm__container__field">
+            <input type="email" name="usersEmail" placeholder="Votre email">
+        </div>
+        <div class="checkoutForm__container__field">
+            <input type="text" name="usersUid" placeholder="Votre email">
+        </div>
+        <div class="checkoutForm__container__field">
+            <input type="password" name="usersPwd" placeholder="Votre mot de passe">
+        </div>
+        <div class="checkoutForm__container__field">
+            <input type="password" name="pwdRepeat" placeholder="Encore une fois">
+        </div>
+
+        <div class="checkoutForm__container__field">
+            <button type="submit" name="submit" class="custom-btn">M'inscrire</button>
+        </div>
+    </form>
+</div>
