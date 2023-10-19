@@ -1,4 +1,4 @@
-.restaurant {
+.restaurants {
 
     @include flexbox(column,nowrap,center,center);
     background: linear-gradient(180deg, #F7F7F7 0%, #F7F7F7 100%);
@@ -17,7 +17,7 @@
         }
     }
     
-    .restaurants-list {
+    &__list {
         min-height: 350px;
         width: 100%;
         display: flex;
@@ -26,7 +26,7 @@
         align-items: center;
         padding-block: 1rem;
 
-        .restaurant-item {
+        &__item {
 
             position: relative;
             width: 335px;
@@ -37,7 +37,7 @@
             justify-content: end;
 
             margin-block: 1rem;
-            img { // bg image
+            &__bgImg { // bg image
                 position: absolute;
                 top: -80px;
                 width: 100%;
@@ -56,7 +56,7 @@
             border-radius: 1rem;
             box-shadow: 0.30px 4px 20px 0px rgba(0, 0, 0, 0.25);
             
-            .restaurant-info {
+            &__info {
 
                 width: 100%;
                 position: absolute;
@@ -70,13 +70,13 @@
                 padding-left: 1.5rem;
                 background-color: white;
 
-                .restaurant-title {
+                &__title {
                     color: #000;
                     font-size: 1.5rem;
                     font-weight: 700;
                 }
 
-                .restaurant-adress {
+                &__adress {
                     color: #1d1d1d;
                     font-family: $roboto;
                     font-size: 1rem;
@@ -93,7 +93,7 @@
                 box-shadow: 0.30px 4px 20px 0px #A35CDC;    
             }
         }
-        .restaurant-selected {
+        &__selected {
             box-shadow: 0.30px 4px 20px 0px #A35CDC;
         }
 
