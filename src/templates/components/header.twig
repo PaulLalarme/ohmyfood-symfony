@@ -1,12 +1,16 @@
 <header class="custom-header">
     <div class="custom-header__container">
-        <img src="{{ asset('arrowLogo.svg') }}" alt="retour en arrière" class="custom-header__container__backArrow">
+        <a href="{{  path('app_homepage') }}"><img src="{{ asset('arrowLogo.svg') }}" alt="retour en arrière" class="custom-header__container__backArrow"></a>
         <p class="custom-header__container__title">ohmyfood</p>
-        <a href="{#{{ path('connection') }}#}">
+        <a href="">
             <div class="custom-header__container__userProfil">
                 <div class="custom-header__container__userProfil__text">
-                    <a href="#" class="custom-header__container__userProfil__text__speudoAccount">Maradzony</a>
-                    <a href="#" class="custom-header__container__userProfil__text__deconnectionAccount">Déconnection</a>
+                    <a href="{{ path('app_connect', {
+                        'slug': 'connection'
+                    }) }}" class="custom-header__container__userProfil__text__speudoAccount">Connection</a>
+                    <a href="{{ path('app_connect', {
+                        'slug': 'inscription'
+                    }) }}" class="custom-header__container__userProfil__text__deconnectionAccount">Inscription</a>
                 </div>
                 <img src="{{ asset('accountLogo.svg') }}" alt="Votre profil" class="custom-header__container__userProfil__logoAccount">
             </div>

@@ -5,10 +5,11 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use function Symfony\Component\String\u;
 
 class RestaurantController extends AbstractController
 {
-    #[Route('/')]
+    #[Route('/', name: 'app_homepage')]
     public function homepage(): Response
     {
         $dishes = [
@@ -41,11 +42,13 @@ class RestaurantController extends AbstractController
         ]);
     }
 
-    #[Route('/browse/{slug}')]
-    public function browse(string $slug): Response
+    #[Route('/connect/{slug}', name:'app_connect')]
+    public function connect(string $slug = null): Response
     {
-        $title = u(str_replace('-', '', $slug))->title(true);
+        $type = $slug ? u(str_replace('-', '', $slug))->title(true) : null;
 
-        return $this->render('')
+        return $this->render('pages/connection.html.twig', [
+            'type' => $type,
+        ]);
     }
 }

@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 
+
 {% block content %}
     <h1>{{ title }}</h1>
     <h2>{{ adress }}</h2>
@@ -9,7 +10,7 @@
         Page du restaurant : {{ title  }}
     </div>
 
-    {{ dump(dishes) }}
+
     <ul>
         {% for dishe in dishes %}
             <li>
