@@ -15,7 +15,6 @@
             color: $font-color-black;
             font-family: $font-family-logo-header;
             cursor: pointer;
-            border: 1px solid red;
             @media (max-width:1200px) {
                 font-size: 2rem;
             }
@@ -26,18 +25,15 @@
             display: block;
             @include size(50px,50px);
             rotate: 270deg;
-            border: 1px solid red;
         }
         &__userProfil {
 
             @include flexbox(row,nowrap,end,center);
-            border: 1px dashed blue;
             cursor:  pointer;
             &__logoAccount {
                 
                 display: block;
                 @include size(50px,50px);
-                border: 1px dashed purple;
             }
             
             &__text {

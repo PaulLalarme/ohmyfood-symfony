@@ -1,6 +1,6 @@
 
 <div class="checkoutForm">
-    <form class="checkoutForm__container" action="" method="post" autocomplete="off">
+    <form class="checkoutForm__container" {{ stimulus_controller('dishe-controls', 'getInfo') }} method="post" autocomplete="off">
         <h1>Inscription</h1>
 
         <div class="checkoutForm__container__field">

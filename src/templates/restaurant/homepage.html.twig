@@ -2,21 +2,19 @@
 
 
 {% block content %}
-    <h1>{{ title }}</h1>
-    <h2>{{ adress }}</h2>
 
-    <div>
-        Introduction : {{ intro }}
-        Page du restaurant : {{ title  }}
-    </div>
+    <ul class="restaurants__list">
+        {% for restaurant in restaurants %}
+            <a class="restaurants__list__item" href="{{ path('app_connect', {
+                slug: '1'
+            }) }}">
+                <div class="restaurants__list__item__bgImg"><img src="../../public/Restaurant1.jpg" alt=""></div>
+                <div class="restaurants__list__item__info">
+                    <p class="restaurants__list__item__info__title"> {{ restaurant.title }} </p>
+                    <p class="restaurants__list__item__info__adress"> {{ restaurant.adresse }} </p>
+                </div>
 
-
-    <ul>
-        {% for dishe in dishes %}
-            <li>
-                <p> {{ dishe.title }} </p>
-                <p> {{ dishe.subtitle }} - {{ dishe.price }}</p>
-            </li>
+            </a>
         {% endfor %}
     </ul>
 {% endblock %}

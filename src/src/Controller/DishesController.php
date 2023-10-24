@@ -9,18 +9,18 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DishesController extends AbstractController
 {
-    #[Route('/dishes/{id<\d+>}', methods: ['GET'])]
-    public function getDishes(int $id, LoggerInterface $logger): Response
+    #[Route('/dishes/{id<\d+>}', methods: ['GET'], name: 'app_dishes_getdishes')]
+    public function getDishes(int $idRestaurant,int $typeDishes, LoggerInterface $logger): Response
     {
         // TODO query the database
         $dishes = [
-            'id' => $id,
-            'name' => 'Poulet rôti',
-            'subtitle' => 'Frites fait maison',
+            'idRestaurant' => $idRestaurant,
+            'typeDishes' => $typeDishes,
         ];
 
-        $logger->info('Retourne une liste de plats par restaurant {dishes}', [
-            'dishes' => $id,
+        $logger->info('Retourne une liste de plats par restaurant: {dishes}', [
+            'idRestaurant' => $idRestaurant,
+            'typeDishes' => $typeDishes,
         ]);
 
         return $this->json($dishes);
