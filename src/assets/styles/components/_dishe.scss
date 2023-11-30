@@ -57,7 +57,7 @@
 
                 display: flex;
                 flex:1;
-                @include flexbox(column,nowrap,center,space-between);
+                @include flexbox(column,nowrap,space-between,center);
                 
                 overflow: hidden;
                 white-space: nowrap;

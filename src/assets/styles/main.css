@@ -191,20 +191,6 @@ body {
   position: relative;
   height: 65px;
   width: 280px;
-  flex-direction: row; /* default is 'row' */
-  flex-wrap: nowrap; /* default is 'nowrap' */
-  justify-content: center; /* default is 'flex-start' */
-  align-items: center;
-  background-color: white;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
-  border-radius: 1rem;
-  overflow: hidden;
-  opacity: 0;
-  animation-name: fadeIn;
-  animation-duration: 0.25s;
-  animation-fill-mode: forwards;
-  margin: 0.5rem 1rem;
-  padding-inline: 1rem;
 }
 .dishes .dishes-list .dishe:nth-child(1) {
   animation-delay: 0s;
