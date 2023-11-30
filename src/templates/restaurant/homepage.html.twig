@@ -8,7 +8,7 @@
             <a class="restaurants__list__item" href="{{ path('app_connect', {
                 slug: '1'
             }) }}">
-                <div class="restaurants__list__item__bgImg"><img src="../../public/Restaurant1.jpg" alt=""></div>
+                <div class="restaurants__list__item__bgImg"><img src="{{ asset('Restaurant1.jpg') }}" alt=""></div>
                 <div class="restaurants__list__item__info">
                     <p class="restaurants__list__item__info__title"> {{ restaurant.title }} </p>
                     <p class="restaurants__list__item__info__adress"> {{ restaurant.adresse }} </p>
