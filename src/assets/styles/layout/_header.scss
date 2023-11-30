@@ -2,7 +2,7 @@
     @include flexbox(column,nowrap,center,center);
     @include size(100%,80px);
     background: $bg-color-header;
-    box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.25);
+    box-shadow:0 -2px 8px 0 rgba(0, 0, 0, 0.25);
     
     
     &__container {

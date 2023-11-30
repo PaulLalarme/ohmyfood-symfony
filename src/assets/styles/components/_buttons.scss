@@ -5,7 +5,7 @@
     color: white;
     border: none;
     border-radius: 1.5rem;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow:0 1px 4px 0 rgba(0, 0, 0, 0.25);
     background: linear-gradient(180deg, #E170DB 0%, #A35CDC 100%);
     font-size: 15px;
     font-style: normal;
@@ -13,7 +13,7 @@
 
     &:hover {
         filter: brightness(110%);
-        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
+        box-shadow:0 1px 4px 0 rgba(0, 0, 0, 0.5);
     }
 }
 
