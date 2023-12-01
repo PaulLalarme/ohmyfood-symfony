@@ -24,7 +24,7 @@ class Restaurant
     #[ORM\Column(length: 255)]
     private ?string $Thumbnail = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(nullable: false)]
     private float $rate = 0.0;
 
     public function __construct()
