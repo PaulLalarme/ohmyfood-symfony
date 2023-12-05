@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajouter des plats</title>
+    <link rel="icon" type="image/png" href="{{ asset('eatlogo.svg') }}">
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+
+<body>
+    <div class="form-generate">
+
+        <h2>Ajouter des plats</h2>
+
+        <!-- Form -->
+        <div class="form-field">
+            <label for="type">Type: </label>
+            <input type="text" id="type" name="type"/>
+        </div>
+
+        <div class="form-field">
+            <label for="title">Intitulé du plat: </label>
+            <input type="text" id="title" name="title"/>
+        </div>
+
+        <div class="form-field">
+            <label for="subtitle">Ingrédients: </label>
+            <input type="text" id="subtitle" name="subtitle"/>
+        </div>
+
+        <div class="form-field">
+            <label for="price">prix: </label>
+            <input type="text" id="price" name="price"/>
+        </div>
+
+        <div class="form-generate">
+            <div id="generate-code">
+                <p>Ajouter en base</p>
+            </div>
+            <div id="generate-preview">
+                <p>Prévisualisation</p>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label for="html-code">Résultat:</label>
+            <textarea id="html-code" name="html-code"></textarea>
+        </div>
+    </div>
+</body>
+</html>
