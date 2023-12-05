@@ -86,6 +86,8 @@
       <path value="$PROJECT_DIR$/src/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/src/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/http-client" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
