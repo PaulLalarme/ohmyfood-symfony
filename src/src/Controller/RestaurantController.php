@@ -6,7 +6,7 @@ use App\Entity\Restaurant;
 use App\Service\RestaurantRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use function Symfony\Component\String\u;
 
@@ -30,7 +30,7 @@ class RestaurantController extends AbstractController
     }
 
     #[Route('/restaurant/new')]
-    public function new(EntityManagerInterface $entityManager): Response
+    public function new(EntityManagerInterface $entityManager, Request $request): Response
     {
         $restaurant = new Restaurant();
         $restaurant->setName('La palette du goût');
