@@ -79,6 +79,8 @@
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/doctrine-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/maker-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/doctrine/data-fixtures" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/doctrine/doctrine-fixtures-bundle" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
