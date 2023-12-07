@@ -10,18 +10,24 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class RestaurantRepository
 {
-    public function findAll(HttpClientInterface $httpClient ,CacheItemInterface $cache): array
+    public function __construct
+    (
+        private HttpClientInterface $httpClient,
+        private CacheInterface $cache
+    ){}
+
+    public function findAllRestaurants(HttpClientInterface $httpClient, CacheInterface $cache): array
     {
-        //return $this->$cache->get('restaurants_data', function (CacheItemInterface $cacheItem) use($httpClient){
-            //$cacheItem->expiresAfter(5);
+        return $this->cache->get('restaurants_data', function (CacheItemInterface $cacheItem) {
+            $cacheItem->expiresAfter(5);
 
             try {
-                $response = $httpClient->request('GET', 'URL');
+                $response = $this->httpClient->request('GET', 'https://github.com/PaulLalarme/RestaurantsPlats');
             } catch (TransportExceptionInterface $e) {
                 dd($e);
             }
 
             return $response->toArray();
-        //});
+        });
     }
 }
