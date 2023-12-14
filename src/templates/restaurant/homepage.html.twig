@@ -4,11 +4,11 @@
 {% block content %}
     <ul class="restaurants__list">
         {% for restaurant in restaurants %}
-            <a class="restaurants__list__item" data-id={{ restaurant.id }}>
+            <a class="restaurants__list__item">
                 <div class="restaurants__list__item__bgImg"><img src="{{ asset( restaurant.thumbnail ~ '.jpg') }}" alt="Image d'un plat"></div>
                 <div class="restaurants__list__item__info">
                     <p class="restaurants__list__item__info__title"> {{ restaurant.name }} </p>
-                    <p class="restaurants__list__item__info__adress"> {{ restaurant.address }} </p>
+                    <p class="restaurants__list__item__info__adress"> {{ restaurant.address }} | {{ restaurant.votesString}} </p>
                 </div>
             </a>
         {% endfor %}
