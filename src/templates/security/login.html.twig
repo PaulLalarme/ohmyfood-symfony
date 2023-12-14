@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Se connecter !{% endblock %}
+
+{% block content %}
+    <form class="form-generate" method="post">
+        <h2>Connection</h2>
+        <div class="checkoutForm__container__field">
+            <label for="inputEmail">Email</label>
+            <input type="email" name="email" id="inputEmail" required autofocus>
+        </div>
+        <div class="checkoutForm__container__field">
+            <label for="inputPassword">mot de passe</label>
+            <input type="password" name="password" id="inputPassword" required>
+        </div>
+        <div class="checkoutForm__container__field">
+            <button class="custom-btn" type="submit">connection</button>
+        </div>
+    </form>
+{% endblock %}
