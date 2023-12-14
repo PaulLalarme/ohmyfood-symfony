@@ -20,17 +20,13 @@ class Restaurant
     private ?string $address = null;
 
     #[ORM\Column]
-    private \DateTimeImmutable $openingAt;
+    private ?\DateTimeImmutable $createdAt = null;
+
     #[ORM\Column(length: 255)]
-    private ?string $Thumbnail = null;
+    private ?string $thumbnail = null;
 
-    #[ORM\Column(nullable: false)]
-    private float $rate = 0.0;
-
-    public function __construct()
-    {
-        $this->openingAt = new \DateTimeImmutable();
-    }
+    #[ORM\Column(nullable: true)]
+    private ?int $votes = null;
 
     public function getId(): ?int
     {
@@ -61,39 +57,45 @@ class Restaurant
         return $this;
     }
 
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $createdAt): static
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
     public function getThumbnail(): ?string
     {
-        return $this->Thumbnail;
+        return $this->thumbnail;
     }
 
-    public function setThumbnail(string $Thumbnail): static
+    public function setThumbnail(string $thumbnail): static
     {
-        $this->Thumbnail = $Thumbnail;
+        $this->thumbnail = $thumbnail;
 
         return $this;
     }
 
-    public function getOpeningAt(): ?\DateTimeImmutable
+    public function getvotes(): ?int
     {
-        return $this->openingAt;
+        return $this->votes;
     }
 
-    public function setOpeningAt(\DateTimeImmutable $openingAt): self
+    public function setvotes(?int $votes): static
     {
-        $this->openingAt = $openingAt;
+        $this->votes = $votes;
 
         return $this;
     }
 
-    public function getRate(): ?float
+    public function getVotesString(): string
     {
-        return $this->rate;
-    }
-
-    public function setRate(?float $rate): static
-    {
-        $this->rate = $rate;
-
-        return $this;
+        $prefix = ($this->votes === null) ? 'pas noter' : '';
+        return sprintf('%s %d', $prefix, abs($this->votes));
     }
 }
