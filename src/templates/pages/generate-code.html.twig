@@ -16,44 +16,34 @@
 </head>
 
 <body>
-    <div class="form-generate">
-
+    <form class="form-generate" method="post">
         <h2>Ajouter des plats</h2>
 
-        <!-- Form -->
+        <label for="inputType">Type:</label>
+        <select name="type" id="inputType">
+            <option value="">entrées</option>
+            <option value="dog">plats</option>
+            <option value="dog">desserts</option>
+        </select>
+
         <div class="form-field">
-            <label for="type">Type: </label>
-            <input type="text" id="type" name="type"/>
+            <label for="inputTitle">Intitulé du plat: </label>
+            <input type="text" id="inputTitle" name="title"/>
         </div>
 
         <div class="form-field">
-            <label for="title">Intitulé du plat: </label>
-            <input type="text" id="title" name="title"/>
+            <label for="inputSubtitle">Ingrédients: </label>
+            <input type="text" id="inputSubtitle" name="subtitle"/>
         </div>
 
         <div class="form-field">
-            <label for="subtitle">Ingrédients: </label>
-            <input type="text" id="subtitle" name="subtitle"/>
+            <label for="inputPrice">prix: </label>
+            <input type="text" id="inputPrice" name="price"/>
         </div>
 
-        <div class="form-field">
-            <label for="price">prix: </label>
-            <input type="text" id="price" name="price"/>
-        </div>
-
-        <div class="form-generate">
-            <div id="generate-code">
-                <p>Ajouter en base</p>
-            </div>
-            <div id="generate-preview">
-                <p>Prévisualisation</p>
-            </div>
-        </div>
-
-        <div class="form-field">
-            <label for="html-code">Résultat:</label>
-            <textarea id="html-code" name="html-code"></textarea>
-        </div>
-    </div>
+        <button class="custom-btn" type="submit">
+            Ajouter en base
+        </button>
+    </form>
 </body>
 </html>
