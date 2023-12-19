@@ -3,18 +3,35 @@
 {% block title %}Se connecter !{% endblock %}
 
 {% block content %}
-    <form class="form-generate" method="post">
-        <h2>Connection</h2>
-        <div class="checkoutForm__container__field">
-            <label for="inputEmail">Email</label>
-            <input type="email" name="email" id="inputEmail" required autofocus>
-        </div>
-        <div class="checkoutForm__container__field">
-            <label for="inputPassword">mot de passe</label>
-            <input type="password" name="password" id="inputPassword" required>
-        </div>
-        <div class="checkoutForm__container__field">
-            <button class="custom-btn" type="submit">connection</button>
-        </div>
-    </form>
+    <section class="login">
+        <form class="login__container" method="post">
+            <h2>Connection</h2>
+
+            {% if error %}
+                <div class="error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            <div class="login__container__field">
+                <label for="inputEmail">Email</label>
+                <input type="email" name="email" id="inputEmail" required autofocus>
+            </div>
+
+            <div class="login__container__field">
+                <label for="inputPassword">mot de passe</label>
+                <input type="password" name="password" id="inputPassword" required>
+            </div>
+
+            <div class="login__container__field">
+                <label for="_remember_me">
+                    <input type="checkbox" name="_remember_me" id="inputRemember">Se souvenir de moi
+                </label>
+            </div>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+            <div class="login__container__field">
+                <button class="custom-btn" type="submit">connection</button>
+            </div>
+        </form>
+    </section>
 {% endblock %}
