@@ -1,0 +1,42 @@
+.login {
+  @include size(100%, 100%);
+  @include flexbox(column, no wrap,left, center);
+
+  &__container {
+    min-width: 370px;
+    max-width: 500px;
+
+    .error {
+      @include size(100%, 2rem);
+      @include flexbox(column, nowrap,center,center);
+      background-color: lightcoral;
+      color: white;
+      border-radius: 5px;
+    }
+
+    h2 {
+      margin: 0;
+      padding-bottom: 1rem;
+    }
+    &__field {
+      @include flexbox(column, no wrap,center, center);
+
+      label {
+        padding-bottom: 0.5rem;
+      }
+      input {
+        width: 250px;
+        padding: 0.25rem 0.5rem;
+        margin-bottom: 0.8rem;
+      }
+      button {
+      margin-bottom: 1.5rem;
+      }
+
+      #inputRemember {
+        width: 30px;
+      }
+    }
+  }
+}
+

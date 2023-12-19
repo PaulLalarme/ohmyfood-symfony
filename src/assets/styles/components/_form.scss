@@ -1,0 +1,29 @@
+h2 {
+  width: 100%;
+  text-align: center;
+  margin: 2rem;
+}
+
+.form-generate {
+  @include flexbox(column,no wrap, center, center);
+
+  .form-field {
+    width: 50%;
+    margin: 1.5rem auto;
+
+    label {
+      font-weight: bold;
+
+      span {
+        font-weight: normal;
+      }
+    }
+
+    input {
+      width: 100%;
+      height: 30px;
+      padding: 0 1rem;
+      margin: 0.2rem 0 0 0;
+    }
+  }
+}
